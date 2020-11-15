@@ -1,0 +1,23 @@
+https://blog.csdn.net/perry0418/article/details/82834995
+you will have to kill the Xvnc process manually
+
+perry0418 2018-09-25 09:56:04  4394  收藏 4
+版权
+1.使用下面命令查看运行中的vncserver pid号
+
+ps -ef | grep vnc
+2. 例如杀死进程pid：22227
+
+sudo kill -9 22227
+3.删除/tmp中的临时文件，例子端口号22
+
+rm -rf /tmp/.X11-unix/X22
+ 
+rm -rf /tmp/.X22-lock
+
+rm -rf /tmp/.X1-lock
+
+
+4.重新启动vnc 
+
+ 
